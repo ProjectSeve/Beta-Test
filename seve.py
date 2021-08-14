@@ -47,7 +47,7 @@ def checking(lines): #Recoded from cc-attack By L330n123
 		s = socket.socket()
 		s.settimeout(1) #1000ms
 		s.connect((str(proxy[0]), int(proxy[1])))
-		s.send(str.encode("GET http://noloadbalance.globe.com.ph HTTP/1.1\r\nHost: "+url+":"+str(port)+"\r\n\r\n"))
+		s.send(str.encode("GET / HTTP/1.1\r\nHost: "+url+":"+str(port)+"\r\n\r\n"))
 		s.close()
 	except:
 		pprr.remove(lines)
