@@ -1,11 +1,5 @@
-#Code By GogoZin
-#Can Be A Skid But Don't Be A Theif
-#-------------------------------#
-# Improved Script performance   #
-# Added Local Proxy Checker     #
-# Auto select file(for skid)    #
-#                 By L330n123   #
-#-------------------------------#
+# Coded by SEVE
+
 
 import time
 import socket
@@ -53,7 +47,7 @@ def checking(lines): #Recoded from cc-attack By L330n123
 		s = socket.socket()
 		s.settimeout(1) #1000ms
 		s.connect((str(proxy[0]), int(proxy[1])))
-		s.send(str.encode("GET / HTTP/1.1\r\nHost: "+url+":"+str(port)+"\r\n\r\n"))
+		s.send(str.encode("GET http://noloadbalance.globe.com.ph HTTP/1.1\r\nHost: "+url+":"+str(port)+"\r\n\r\n"))
 		s.close()
 	except:
 		pprr.remove(lines)
@@ -112,7 +106,7 @@ def main():
 	cho = str(input("Get Some Fresh Proxies ? (y/n) : "))                                                           #Code By GogoZin
 	if cho =='y':
 		if sl =='y':
-			rsp = requests.get('https://api.proxyscrape.com/?request=getproxies&proxytype=http&timeout=1000&country=all&ssl=yes&anonymity=all') # Code By GogoZin
+			rsp = requests.get('https://api.good-proxies.ru/get.php?type%5Bhttp%5D=on&count=0&ping=50000&time=10000&key=3269305ce8094af10e5933fe67db8529')
 			with open("proxies.txt","wb") as fp:
 				fp.write(rsp.content)
 				print("Sucess Get Https Proxies List !")
