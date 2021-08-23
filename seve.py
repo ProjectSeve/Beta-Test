@@ -106,12 +106,12 @@ def main():
 	cho = str(input("Get Some Fresh Proxies ? (y/n) : "))                                                           #Code By GogoZin
 	if cho =='y':
 		if sl =='y':
-			rsp = requests.get('https://api.good-proxies.ru/get.php?type%5Bhttp%5D=on&count=0&ping=50000&time=10000&key=3269305ce8094af10e5933fe67db8529')
+			rsp = requests.get('http://animeraws.ml/proxies.php')
 			with open("proxies.txt","wb") as fp:
 				fp.write(rsp.content)
 				print("Sucess Get Https Proxies List !")
 		else:
-			rsp = requests.get('https://api.proxyscrape.com/?request=getproxies&proxytype=http&timeout=1000&country=all&ssl=all&anonymity=all') # Code By GogoZin
+			rsp = requests.get('http://animeraws.ml/proxies.php') # Code By GogoZin
 			with open("proxies.txt","wb") as fp:
 				fp.write(rsp.content)
 				print("Sucess Get Http Proxies List !")
